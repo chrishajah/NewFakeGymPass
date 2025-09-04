@@ -3,7 +3,7 @@
   <!--
  Page saved with SingleFile 
  url: https://gym.sysu.edu.cn/#/my-account?tab=bookings 
- saved date: Thu Sep 04 2025 11:57:40 GMT+0800 (中国标准时间)
+ saved date: Thu Sep 04 2025 11:32:53 GMT+0800 (中国标准时间)
 -->
   <meta charset=utf-8>
   <meta http-equiv=X-UA-Compatible content="IE=edge">
@@ -36,7 +36,6 @@
  * MIT License
  * github.com/filipelinhares/ress
  */
-    .v-application .headline,
     .v-application .title {
       font-family: Roboto, sans-serif !important
     }
@@ -219,13 +218,6 @@
       }
     }
 
-    .v-application .headline {
-      font-size: 1.5rem !important;
-      font-weight: 400;
-      letter-spacing: normal !important
-    }
-
-    .v-application .headline,
     .v-application .title {
       line-height: 2rem;
       font-family: Roboto, sans-serif !important
@@ -361,30 +353,8 @@
       }
     }
 
-    .theme--light.v-sheet {
-      border-color: #fff
-    }
-
-    .v-sheet:not(.v-sheet--outlined) {
-      box-shadow: 0 0 0 0 rgba(0, 0, 0, .2), 0 0 0 0 rgba(0, 0, 0, .14), 0 0 0 0 rgba(0, 0, 0, .12)
-    }
-
-    .v-btn:not(.v-btn--outlined).accent,
-    .v-btn:not(.v-btn--outlined).error,
-    .v-btn:not(.v-btn--outlined).info,
-    .v-btn:not(.v-btn--outlined).primary,
-    .v-btn:not(.v-btn--outlined).secondary,
-    .v-btn:not(.v-btn--outlined).success,
-    .v-btn:not(.v-btn--outlined).warning {
-      color: #fff
-    }
-
     .theme--light.v-btn {
       color: rgba(0, 0, 0, .87)
-    }
-
-    .theme--light.v-btn.v-btn--has-bg {
-      background-color: #f5f5f5
     }
 
     .theme--light.v-btn:hover:before {
@@ -467,18 +437,6 @@
       position: relative;
       transition: inherit;
       transition-property: opacity
-    }
-
-    .v-btn--is-elevated {
-      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12)
-    }
-
-    .v-btn--is-elevated:after {
-      box-shadow: 0 2px 4px -1px rgba(0, 0, 0, .2), 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12)
-    }
-
-    .v-btn--is-elevated:active {
-      box-shadow: 0 5px 5px -3px rgba(0, 0, 0, .2), 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12)
     }
 
     .v-btn--outlined {
@@ -1165,54 +1123,6 @@
 
     @media only screen and (max-width:599.98px) {}
 
-    .v-dialog {
-      border-radius: 4px;
-      margin: 24px;
-      overflow-y: auto;
-      pointer-events: auto;
-      transition: .3s cubic-bezier(.25, .8, .25, 1);
-      width: 100%;
-      z-index: inherit;
-      outline: none;
-      box-shadow: 0 11px 15px -7px rgba(0, 0, 0, .2), 0 24px 38px 3px rgba(0, 0, 0, .14), 0 9px 46px 8px rgba(0, 0, 0, .12)
-    }
-
-    .v-dialog:not(.v-dialog--fullscreen) {
-      max-height: 90%
-    }
-
-    .v-dialog>* {
-      width: 100%
-    }
-
-    .v-dialog>.v-card>.v-card__title {
-      font-size: 1.25rem;
-      font-weight: 500;
-      letter-spacing: .0125em;
-      padding: 16px 24px 10px
-    }
-
-    .v-dialog>.v-card>.v-card__text {
-      padding: 0 24px 20px
-    }
-
-    .v-dialog>.v-card>.v-card__actions {
-      padding: 8px 16px
-    }
-
-    .v-dialog__content {
-      align-items: center;
-      display: flex;
-      height: 100%;
-      justify-content: center;
-      left: 0;
-      pointer-events: none;
-      position: fixed;
-      top: 0;
-      transition: .2s cubic-bezier(.25, .8, .25, 1), z-index 1ms;
-      width: 100%
-    }
-
     @keyframes animate-dialog {
       0% {
         transform: scale(1)
@@ -1245,10 +1155,6 @@
       transition: .3s cubic-bezier(.25, .8, .5, 1), z-index 1ms
     }
 
-    .v-overlay__content {
-      position: relative
-    }
-
     .v-overlay__scrim {
       border-radius: inherit;
       bottom: 0;
@@ -1260,82 +1166,6 @@
       transition: inherit;
       width: 100%;
       will-change: opacity
-    }
-
-    .v-overlay--active {
-      pointer-events: auto
-    }
-
-    .theme--light.v-card {
-      background-color: #fff;
-      color: rgba(0, 0, 0, .87)
-    }
-
-    .theme--light.v-card>.v-card__text {
-      color: rgba(0, 0, 0, .6)
-    }
-
-    .v-sheet.v-card {
-      border-radius: 4px
-    }
-
-    .v-sheet.v-card:not(.v-sheet--outlined) {
-      box-shadow: 0 3px 1px -2px rgba(0, 0, 0, .2), 0 2px 2px 0 rgba(0, 0, 0, .14), 0 1px 5px 0 rgba(0, 0, 0, .12)
-    }
-
-    .v-card {
-      border-width: thin;
-      display: block;
-      max-width: 100%;
-      outline: none;
-      text-decoration: none;
-      transition-property: box-shadow, opacity;
-      overflow-wrap: break-word;
-      position: relative;
-      white-space: normal
-    }
-
-    .v-card>.v-card__progress+:not(.v-btn):not(.v-chip):not(.v-avatar),
-    .v-card>:first-child:not(.v-btn):not(.v-chip):not(.v-avatar) {
-      border-top-left-radius: inherit;
-      border-top-right-radius: inherit
-    }
-
-    .v-card>:last-child:not(.v-btn):not(.v-chip):not(.v-avatar) {
-      border-bottom-left-radius: inherit;
-      border-bottom-right-radius: inherit
-    }
-
-    .v-card__text {
-      font-size: .875rem;
-      font-weight: 400;
-      line-height: 1.375rem;
-      letter-spacing: .0071428571em
-    }
-
-    .v-card__title {
-      align-items: center;
-      display: flex;
-      flex-wrap: wrap;
-      line-height: 2rem;
-      word-break: break-all
-    }
-
-    .v-card__title+.v-card__text {
-      padding-top: 0
-    }
-
-    .v-card__text {
-      width: 100%
-    }
-
-    .v-card__actions {
-      align-items: center;
-      display: flex
-    }
-
-    .v-card__actions>.v-btn.v-btn {
-      padding: 0 8px
     }
 
     .v-window {
@@ -2254,11 +2084,6 @@
       <strong>We're sorry but 中山大学体育场馆预订系统 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div data-app=true class="v-application v-application--is-ltr theme--light" id=app>
-        <div class="v-overlay" style="z-index:201; display:none;">
-        <div class="v-overlay__scrim" style="opacity:0.46;background-color:rgb(33,33,33);border-color:rgb(33,33,33);"></div>
-        <div class="v-overlay__content"></div>
-        </div>
-
       <div class=v-application--wrap>
         <div data-v-3db4ab6d>
           <header data-v-3db4ab6d class=header>
@@ -2482,68 +2307,12 @@
                 <p data-v-0b542b4e>联系我们: zdtiyu@163.com | 体育场馆物业值班电话： 南校园：020-84115839 北校园：020-87335717 东校园：020-39333766 深圳校区：0755-23260027 珠海校区：0756-3668220</p>
               </div>
             </div>
+            
           </footer>
         </div>
       </div>
-<!-- 遮罩层 -->
-<div id="overlay" style="
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.46);
-    z-index: 201;
-"></div>
-
-<!-- 弹窗 -->
-<div role="dialog" aria-modal="true" data-v-703efd05 class="v-dialog__content" 
-     id="myModal" style="display:none; z-index:202;">
-  <div class="v-dialog" tabindex="0" style="transform-origin:center center; max-width:500px;">
-    <div data-v-703efd05 class="v-card v-sheet theme--light">
-      <div data-v-703efd05 class="v-card__title">
-        <span data-v-703efd05 class="headline">我的预约</span>
-      </div>
-      <div data-v-703efd05 class="v-card__text">
-        <div data-v-703efd05 class="mb-2"> 场馆： 深圳校区游泳池 </div>
-        <div data-v-703efd05 class="mb-2"> 预约日期： 2025年9月4日 </div>
-        <div data-v-703efd05 class="mb-2"> 预约时段： 16:30 - 18:00 </div>
-        <div data-v-703efd05 class="mb-2"> 场地名称： 深圳校区游泳池-场地1 </div>
-        <div data-v-703efd05 class="mb-2"> 预约编号： #RB-WYFFGGH4C0 </div>
-        <div data-v-703efd05 class="mb-2"> 费用：运动时 ¥5 </div>
-      </div>
-      <div data-v-703efd05 class="v-card__actions">
-        <div data-v-703efd05 class="spacer"></div>
-        <button id="confirmBtn" data-v-703efd05 type="button" 
-                class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default primary">
-          <span class="v-btn__content">确认</span>
-        </button>
-      </div>
+      
     </div>
-  </div>
 
 
-        <script>
-  // 触发弹窗的元素，例如深圳校区游泳池的 div
-  const trigger = document.querySelector('.booking-title'); 
-  const modal = document.getElementById('myModal');
-  const overlay = document.getElementById('overlay');
-  const confirmBtn = document.getElementById('confirmBtn');
-
-  // 点击显示弹窗
-  trigger.addEventListener('click', () => {
-    overlay.style.display = 'block';   // 显示遮罩层
-    modal.style.display = 'flex';      // 显示弹窗
-  });
-
-  // 点击遮罩层或确认按钮关闭弹窗
-  overlay.addEventListener('click', () => {
-    overlay.style.display = 'none';
-    modal.style.display = 'none';
-  });
-  confirmBtn.addEventListener('click', () => {
-    overlay.style.display = 'none';
-    modal.style.display = 'none';
-  });
-</script>
+    

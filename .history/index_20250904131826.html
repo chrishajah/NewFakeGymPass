@@ -2254,11 +2254,10 @@
       <strong>We're sorry but 中山大学体育场馆预订系统 doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
     </noscript>
     <div data-app=true class="v-application v-application--is-ltr theme--light" id=app>
-        <div class="v-overlay" style="z-index:201; display:none;">
-        <div class="v-overlay__scrim" style="opacity:0.46;background-color:rgb(33,33,33);border-color:rgb(33,33,33);"></div>
-        <div class="v-overlay__content"></div>
-        </div>
-
+      <div class="v-overlay v-overlay--active theme--dark" style=z-index:201>
+        <div class=v-overlay__scrim style=opacity:0.46;background-color:rgb(33,33,33);border-color:rgb(33,33,33)></div>
+        <div class=v-overlay__content></div>
+      </div>
       <div class=v-application--wrap>
         <div data-v-3db4ab6d>
           <header data-v-3db4ab6d class=header>
@@ -2386,7 +2385,7 @@
                             </div>
                             <div data-v-703efd05 class="card-details text-body-2">
                               <div data-v-703efd05>
-                                <i data-v-703efd05 aria-hidden=true class="v-icon notranslate mr-2 mdi mdi-calendar theme--light" style=font-size:16px></i> 2025年9月4日 <i data-v-703efd05 aria-hidden=true class="v-icon notranslate ml-2 mr-1 mdi mdi-clock-outline theme--light" style=font-size:16px></i> 16:30 - 18:00 <i data-v-703efd05 aria-hidden=true class="v-icon notranslate ml-2 mr-1 mdi mdi-map-marker theme--light" style=font-size:16px></i> 深圳校区游泳池-场地1
+                                <i data-v-703efd05 aria-hidden=true class="v-icon notranslate mr-2 mdi mdi-calendar theme--light" style=font-size:16px></i> 2025年9月6日 <i data-v-703efd05 aria-hidden=true class="v-icon notranslate ml-2 mr-1 mdi mdi-clock-outline theme--light" style=font-size:16px></i> 16:30 - 18:00 <i data-v-703efd05 aria-hidden=true class="v-icon notranslate ml-2 mr-1 mdi mdi-map-marker theme--light" style=font-size:16px></i> 深圳校区游泳池-场地1
                               </div>
                             </div>
                             <div data-v-703efd05 class=card-actions>
@@ -2485,65 +2484,30 @@
           </footer>
         </div>
       </div>
-<!-- 遮罩层 -->
-<div id="overlay" style="
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.46);
-    z-index: 201;
-"></div>
 
-<!-- 弹窗 -->
-<div role="dialog" aria-modal="true" data-v-703efd05 class="v-dialog__content" 
-     id="myModal" style="display:none; z-index:202;">
-  <div class="v-dialog" tabindex="0" style="transform-origin:center center; max-width:500px;">
-    <div data-v-703efd05 class="v-card v-sheet theme--light">
-      <div data-v-703efd05 class="v-card__title">
-        <span data-v-703efd05 class="headline">我的预约</span>
-      </div>
-      <div data-v-703efd05 class="v-card__text">
-        <div data-v-703efd05 class="mb-2"> 场馆： 深圳校区游泳池 </div>
-        <div data-v-703efd05 class="mb-2"> 预约日期： 2025年9月4日 </div>
-        <div data-v-703efd05 class="mb-2"> 预约时段： 16:30 - 18:00 </div>
-        <div data-v-703efd05 class="mb-2"> 场地名称： 深圳校区游泳池-场地1 </div>
-        <div data-v-703efd05 class="mb-2"> 预约编号： #RB-WYFFGGH4C0 </div>
-        <div data-v-703efd05 class="mb-2"> 费用：运动时 ¥5 </div>
-      </div>
-      <div data-v-703efd05 class="v-card__actions">
-        <div data-v-703efd05 class="spacer"></div>
-        <button id="confirmBtn" data-v-703efd05 type="button" 
-                class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default primary">
-          <span class="v-btn__content">确认</span>
-        </button>
+      
+      <!-- 弹窗 -->
+      <div role=dialog aria-modal=true data-v-703efd05 class="v-dialog__content v-dialog__content--active" style=z-index:202>
+        <div class="v-dialog v-dialog--active" tabindex=0 style="transform-origin:center center;max-width:500px">
+          <div data-v-703efd05 class="v-card v-sheet theme--light">
+            <div data-v-703efd05 class=v-card__title>
+              <span data-v-703efd05 class=headline>我的预约</span>
+            </div>
+            <div data-v-703efd05 class=v-card__text>
+              <div data-v-703efd05 class=mb-2> 场馆： 深圳校区游泳池 </div>
+              <div data-v-703efd05 class=mb-2> 预约日期： 2025年9月4日 </div>
+              <div data-v-703efd05 class=mb-2> 预约时段： 16:30 - 18:00 </div>
+              <div data-v-703efd05 class=mb-2> 场地名称： 深圳校区游泳池-场地1 </div>
+              <div data-v-703efd05 class=mb-2> 预约编号： #RB-WYFFGGH4C0 </div>
+              <div data-v-703efd05 class=mb-2> 费用：运动时 ¥5 </div>
+            </div>
+            <div data-v-703efd05 class=v-card__actions>
+              <div data-v-703efd05 class=spacer></div>
+              <button data-v-703efd05 type=button class="v-btn v-btn--is-elevated v-btn--has-bg theme--light v-size--default primary">
+                <span class=v-btn__content>确认</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-
-
-        <script>
-  // 触发弹窗的元素，例如深圳校区游泳池的 div
-  const trigger = document.querySelector('.booking-title'); 
-  const modal = document.getElementById('myModal');
-  const overlay = document.getElementById('overlay');
-  const confirmBtn = document.getElementById('confirmBtn');
-
-  // 点击显示弹窗
-  trigger.addEventListener('click', () => {
-    overlay.style.display = 'block';   // 显示遮罩层
-    modal.style.display = 'flex';      // 显示弹窗
-  });
-
-  // 点击遮罩层或确认按钮关闭弹窗
-  overlay.addEventListener('click', () => {
-    overlay.style.display = 'none';
-    modal.style.display = 'none';
-  });
-  confirmBtn.addEventListener('click', () => {
-    overlay.style.display = 'none';
-    modal.style.display = 'none';
-  });
-</script>
