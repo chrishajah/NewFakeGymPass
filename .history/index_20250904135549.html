@@ -26,7 +26,7 @@
     transform: scale(1);
     opacity: 1;
   }
-
+  
 
     .v-text-field>.v-input__control>.v-input__slot:after {
       border-color: currentColor;
@@ -2528,57 +2528,58 @@
 
 
 
-
 <script>
-        const cards = document.querySelectorAll('.card-item');
-        const modal = document.getElementById('myModal');
-        const dialogContent = document.getElementById('dialogContent');
-        const overlay = document.getElementById('overlay');
-        const confirmBtn = document.getElementById('confirmBtn');
+const cards = document.querySelectorAll('.card-item');
+const modal = document.getElementById('myModal');
+const overlay = document.getElementById('overlay');
+const confirmBtn = document.getElementById('confirmBtn');
 
-        cards.forEach(card => {
-        card.addEventListener('click', () => {
-            // 填充内容（你的原逻辑）
-            const venue = card.querySelector('.booking-title')?.innerText || '';
-            const idAndFee = card.querySelector('.booking-id')?.innerText || '';
-            const [appointmentID, fee] = idAndFee.split(' 运动时 ');
-            const detailsDiv = card.querySelector('.card-details div');
-            let date = '', time = '', place = '';
-            if(detailsDiv){
-            const texts = detailsDiv.innerText.split(/\s+/);
-            date = texts[0];
-            time = texts[1] + ' - ' + texts[3];
-            place = texts.slice(4).join(' ');
-            }
-            document.getElementById('modalContent').innerHTML = `
-            <div class="mb-2">场馆： ${venue}</div>
-            <div class="mb-2">预约日期： ${date}</div>
-            <div class="mb-2">预约时段： ${time}</div>
-            <div class="mb-2">场地名称： ${place}</div>
-            <div class="mb-2">预约编号： ${appointmentID}</div>
-            <div class="mb-2">费用：运动时 ${fee}</div>
-            `;
+cards.forEach(card => {
+  card.addEventListener('click', () => {
+    // 场馆
+    const venue = card.querySelector('.booking-title')?.innerText || '';
+    
+    // 预约编号和费用
+    const idAndFee = card.querySelector('.booking-id')?.innerText || '';
+    const [appointmentID, fee] = idAndFee.split(' 运动时 ') // 拆分预约编号和费用
+    
+    // 预约日期、时段、场地名称
+    const detailsDiv = card.querySelector('.card-details div');
+    let date = '', time = '', place = '';
+    if(detailsDiv){
+      const texts = detailsDiv.innerText.split(/\s+/); 
+      // texts 应该类似 ["2025年9月2日", "19:30", "-", "21:00", "深圳校区游泳池-场地1"]
+      date = texts[0];
+      time = texts[1] + " - " + texts[3]; // "19:30 - 21:00"
+      place = texts.slice(4).join(" "); // "深圳校区游泳池-场地1"
+    }
 
-            // 显示遮罩和弹窗
-            overlay.style.display = 'block';
-            modal.style.display = 'flex';
+    // 填充弹窗
+    document.getElementById('modalContent').innerHTML = `
+      <div data-v-703efd05 class="mb-2">场馆： ${venue}</div>
+      <div data-v-703efd05 class="mb-2">预约日期： ${date}</div>
+      <div data-v-703efd05 class="mb-2">预约时段： ${time}</div>
+      <div data-v-703efd05 class="mb-2">场地名称： ${place}</div>
+      <div data-v-703efd05 class="mb-2">预约编号： ${appointmentID}</div>
+      <div data-v-703efd05 class="mb-2">费用：运动时 ${fee}</div>
+    `;
 
-            // 延迟加上 show 类触发动画
-            setTimeout(() => {
-            dialogContent.classList.add('show');
-            }, 10); // 10ms 微延迟保证 transition 能生效
-        });
-        });
+    // 显示遮罩和弹窗
+    overlay.style.display = 'block';
+    modal.style.display = 'flex';
+  });
+});
 
-        // 关闭弹窗
-        function closeModal(){
-        dialogContent.classList.remove('show'); // 先触发缩小动画
-        setTimeout(() => { // 动画结束后隐藏弹窗和遮罩
-            modal.style.display = 'none';
-            overlay.style.display = 'none';
-        }, 300); // 300ms 对应 transition 时间
-        }
+// 关闭弹窗
+overlay.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  modal.style.display = 'none';
+});
 
-        overlay.addEventListener('click', closeModal);
-        confirmBtn.addEventListener('click', closeModal);
+confirmBtn.addEventListener('click', () => {
+  overlay.style.display = 'none';
+  modal.style.display = 'none';
+});
+
+
 </script>
